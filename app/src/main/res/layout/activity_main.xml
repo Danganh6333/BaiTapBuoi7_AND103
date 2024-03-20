@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="HardcodedText"
+    tools:ignore="HardcodedText,ContentDescription"
     android:id="@+id/main"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -19,9 +19,18 @@
        />
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:soundEffectsEnabled="true"
         android:id="@+id/recycle"
         />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/blue"
+        android:src="@drawable/baseline_add_24" />
 </LinearLayout>

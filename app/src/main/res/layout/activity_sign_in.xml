@@ -2,85 +2,85 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    tools:ignore="LabelFor,HardcodedText"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    tools:ignore="HardcodedText"
     android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp"
+    android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+    android:paddingTop="186dp"
     tools:context=".SignIn">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="50dp"
-        android:importantForAccessibility="no"
-        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:textColor="@color/black"
-        android:layout_marginEnd="16dp"
-        android:textSize="20sp"
-        android:paddingBottom="8dp"
-        android:paddingTop="16dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="Username:"/>
-    <EditText
-        android:id="@+id/edtUsername"
+        android:text="Chào mừng bạn đã trở lại,"
+        android:textSize="19sp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"/>
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/text"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:padding="10dp"
-        android:inputType="textEmailAddress"
-        android:importantForAutofill="no"
-        />
-    <EditText
-        android:id="@+id/edtPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/text"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="12dp"
-        android:padding="10dp"
-        android:inputType="textPassword"
-        android:importantForAutofill="no"
-        />
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:textAllCaps="true"
-        android:background="@drawable/button"
-        android:layout_gravity="center"
-        android:textSize="17sp"
+        android:text="Vui lòng đăng nhập để tiếp tục"
+        android:textSize="25sp"
         android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        app:backgroundTint="@null"
-        android:text="Login"
-        android:textColor="@color/black"/>
-    <TextView
-        android:id="@+id/tvResetPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Forgot password ?"
-        android:textAlignment="center"
-        android:padding="12dp"
         android:textColor="@color/black"
-        android:textSize="17sp"
-        />
-    <TextView
-        android:id="@+id/tvSignUp"
+        android:layout_marginBottom="25dp"/>
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="10dp"
+        app:counterEnabled="true"
+        app:helperText="*Require"
+        app:helperTextTextColor="#D41515">
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập username"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="10dp"
+        app:counterEnabled="true"
+        app:helperText="*Require"
+        app:helperTextTextColor="#D41515">
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập password"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <CheckBox
+        android:id="@+id/chkLuu"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Don\'t have a account?<b>Sign Up</b> "
-        android:textColor="@color/black"
-        android:textSize="17sp"
-        android:padding="12dp"
-        android:textAlignment="center"/>
+        android:text="Ghi nhớ tài khoản"
+        android:textStyle="bold"
+        android:layout_marginBottom="3dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignIn"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:text="ĐĂNG NHẬP"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/green"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_alignParentStart="true"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:text="ĐĂNG KÝ"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:backgroundTint="@color/orange"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
 </LinearLayout>

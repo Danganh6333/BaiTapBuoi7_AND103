@@ -8,4 +8,8 @@
     <color name="blue_grey">#4a535c</color>
     <color name="light_blue">#6dbaf7</color>
     <color name="blue">#09aaf4</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorGreen">#4CAF50</color>
+    <color name="colorPrimaryDark">#303F9F</color>
 </resources>
